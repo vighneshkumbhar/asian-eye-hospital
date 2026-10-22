@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --navy: #0B1F3A;
+    --navy-mid: #112240;
+    --navy-light: #172A45;
+    --teal: #0FA3B1;
+    --teal-light: #1CD4E6;
+    --teal-dark: #0d8591;
+    --soft-blue: #F0F7FF;
+    --ice: #F5FAFE;
+    --warm-white: #FAFBFD;
+    --gold: #F7BA60;
+    --gold-dark: #E0A143;
+    --gold-pale: #FFF8EC;
+    --text-dark: #0B132B;
+    --text-mid: #34495E;
+    --text-muted: #627D98;
+    --border: #E2ECF5;
+    
+    --font-head: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--warm-white);
+  color: var(--text-mid);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-head {
+  font-family: var(--font-head);
+  color: var(--navy);
+}
+
+/* Premium Color Grading for Photos */
+.photo-graded {
+  filter: saturate(0.85) contrast(1.02) brightness(0.99) sepia(0.02) hue-rotate(-3deg);
+  transition: filter 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.photo-graded:hover {
+  filter: saturate(0.95) contrast(1.03) brightness(1.01);
+}
